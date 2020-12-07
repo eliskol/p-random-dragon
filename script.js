@@ -14,7 +14,7 @@ console.log(rs);
 console.log(rc);
 var d = document.createElement('div');
 d.innerText = r;
-document.body.appendChild(d);
+//document.body.appendChild(d);
 
 var dl = document.getElementsByTagName('div') - 1;
 
@@ -23,7 +23,14 @@ i.src = "https://www1.flightrising.com/rendern/350/" + rc;
 i.src = i.src + "/" + r;
 i.src = i.src + "_350.png"
 console.log(i.src);
+var dl = "https://www1.flightrising.com/dragon/" + r;
+d.setAttribute("onclick", "window.open("+ "'" + dl  + "')");
 d.appendChild(i);
+
+let fd = document.getElementsByTagName('div')[0];
+
+document.body.insertBefore(d, fd);
+
 }
 
 
